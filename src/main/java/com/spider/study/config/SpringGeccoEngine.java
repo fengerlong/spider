@@ -1,4 +1,4 @@
-package com.spider.study;
+package com.spider.study.config;
 
 import com.geccocrawler.gecco.pipeline.PipelineFactory;
 import org.springframework.context.ApplicationListener;

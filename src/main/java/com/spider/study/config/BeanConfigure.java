@@ -1,6 +1,5 @@
 package com.spider.study.config;
 
-import com.spider.study.SpringPipelineFactory;
 import com.spider.study.demo.ConsolePipeline;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

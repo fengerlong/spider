@@ -1,13 +1,14 @@
 package com.spider.study;
 
 import com.geccocrawler.gecco.GeccoEngine;
+import com.spider.study.config.SpringGeccoEngine;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
 @Configuration
+@SpringBootApplication
 public class StudyApplication {
 
     public static void main(String[] args) {
