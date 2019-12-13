@@ -5,10 +5,10 @@ import com.geccocrawler.gecco.pipeline.Pipeline;
 import com.geccocrawler.gecco.spider.SpiderBean;
 import org.springframework.stereotype.Service;
 
-public class ConsolePipeline implements Pipeline<MyGithub> {
+public class ConsolePipeline implements Pipeline<SpiderBean> {
 
 	@Override
-	public void process(MyGithub bean) {
+	public void process(SpiderBean bean) {
 
 		System.out.println(JSON.toJSONString(bean));
 	}

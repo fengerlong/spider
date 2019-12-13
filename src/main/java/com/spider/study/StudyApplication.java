@@ -1,6 +1,7 @@
 package com.spider.study;
 
 import com.geccocrawler.gecco.GeccoEngine;
+import com.spider.study.config.RedisStartScheduler;
 import com.spider.study.config.SpringGeccoEngine;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -22,8 +23,8 @@ public class StudyApplication {
             public void init() {
                 GeccoEngine.create()
                         .pipelineFactory(springPipelineFactory)
-                        .classpath("com.spider.study.demo")
-                        .start("https://github.com/xtuhcy/gecco")
+                        .classpath("com.spider.study.jscj")
+                        .start("http://news.iresearch.cn/")
                         .interval(2000)
                         .loop(false)
                         .debug(false)
