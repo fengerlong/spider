@@ -4,7 +4,6 @@ import com.geccocrawler.gecco.annotation.Gecco;
 import com.geccocrawler.gecco.annotation.HtmlField;
 import com.geccocrawler.gecco.annotation.RequestParameter;
 import com.geccocrawler.gecco.annotation.Text;
-
 import com.geccocrawler.gecco.spider.HtmlBean;
 import lombok.Data;
 
@@ -17,30 +16,24 @@ import lombok.Data;
  * @Date: 2019/12/13 下午3:32
  */
 @Data
-@Gecco(matchUrl="http://news.iresearch.cn/content/{yeary}/{month}/{code}.shtml", pipelines={"productDetailPipeline"})
-public class ProductDetail implements HtmlBean {
+@Gecco(matchUrl="https://www.jinse.com/blockchain/{code}.html", pipelines={"blockchainProductDetailPipeline"})
+public class BlockchainProductDetail implements HtmlBean {
 
     private static final long serialVersionUID = -377053120283382723L;
-
-    /**
-     * 文本内容
-     */
-    @HtmlField(cssPath = "body > div.g-content > div.g-bd.f-mt-auto > div > div.g-mn > div > div.g-article > div.m-article")
-    private String content;
-
-    @RequestParameter
-    private String code;
-
-    @RequestParameter
-    private String year;
-
-    @RequestParameter
-    private String month;
 
     /**
      * 标题
      */
     @Text
-    @HtmlField(cssPath = "body > div.g-content > div.g-main.f-mt-auto > div > div > div.title > h1")
+    @HtmlField(cssPath = "div.js-container.js-content>div.js-left > h1")
     private String title;
+    /**
+     * 文本内容
+     */
+    @HtmlField(cssPath = "div.js-container.js-content > div.js-left > div.js-article")
+    private String content;
+
+    @RequestParameter
+    private String code;
+
 }

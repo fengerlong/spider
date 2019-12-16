@@ -1,4 +1,4 @@
-package com.spider.study.jscj;
+package com.spider.study.irseach;
 
 import com.geccocrawler.gecco.annotation.PipelineName;
 import com.geccocrawler.gecco.pipeline.Pipeline;
@@ -20,6 +20,7 @@ public class ProductDetailPipeline  implements Pipeline<ProductDetail> {
     @Override
     public void process(ProductDetail productDetail) {
         System.out.println("~~~~~~~~~productDetailPipeline~~~~~~~~~~~");
+        System.out.println(productDetail.getContent());
         File resultFile = new File("result.txt");
         if (!resultFile.exists()) {
             try {

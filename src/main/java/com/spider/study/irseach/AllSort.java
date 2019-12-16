@@ -1,4 +1,4 @@
-package com.spider.study.jscj;
+package com.spider.study.irseach;
 
 import com.geccocrawler.gecco.annotation.Gecco;
 import com.geccocrawler.gecco.annotation.HtmlField;

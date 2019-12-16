@@ -1,4 +1,4 @@
-package com.spider.study.jscj;
+package com.spider.study.irseach;
 
 import com.geccocrawler.gecco.annotation.PipelineName;
 import com.geccocrawler.gecco.pipeline.Pipeline;
@@ -29,6 +29,7 @@ public class AllSortPipeline implements Pipeline<AllSort> {
         categorys.addAll(allSort.getNetGame());
         categorys.addAll(allSort.getNetMarket());
         for(Category category : categorys) {
+            System.out.println("parentName"+category.getParentName());
             List<HrefBean> hrefs = category.getCategorys();
             for(HrefBean href : hrefs) {
                 System.out.println("title: " + href.getTitle() + " url: " + href.getUrl());
